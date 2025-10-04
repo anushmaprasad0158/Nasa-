@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will It Rain On My Parade?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌦️ Will It Rain On My Parade?</h1>
+    <p>Predict rain and weather using NASA Earth data</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <div class="input-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="e.g. New York, USA" />
+      </div>
+
+      <div class="input-group">
+        <label for="lat">Latitude</label>
+        <input type="number" id="lat" placeholder="40.7128" step="0.0001" />
+      </div>
+
+      <div class="input-group">
+        <label for="lon">Longitude</label>
+        <input type="number" id="lon" placeholder="-74.0060" step="0.0001" />
+      </div>
+
+      <div class="input-group">
+        <label for="date">Select Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <button id="getForecast">Get Forecast</button>
+    </section>
+
+    <section id="forecastSection" class="hidden">
+      <h2>Forecast Results</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🌧️ Rain Probability</h3>
+          <p id="rainProb">--%</p>
+        </div>
+        <div class="card">
+          <h3>🌡️ Temperature</h3>
+          <p id="temp">-- °C</p>
+        </div>
+        <div class="card">
+          <h3>💨 Wind Speed</h3>
+          <p id="wind">-- km/h</p>
+        </div>
+        <div class="card">
+          <h3>🌫️ Air Quality</h3>
+          <p id="aqi">--</p>
+        </div>
+      </div>
+
+      <div id="advice"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for NASA Space Apps Challenge 2025 • Team SkyPredict</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
